@@ -34,29 +34,15 @@ body{overflow-x: hidden;}
 	src: url(fonts/opensans.ttf);
 	font-family: opensans; 
 }
-@font-face{
-	src: url(fonts/novecentoNormal.otf);
-	font-family: novecento;
-}
-@font-face{
-	src: url(fonts/novecentoDemiBold.otf);
-	font-family: novecentoDemi;
-}
-@font-face{
-	src: url(fonts/novecentoMedium.otf);
-	font-family: novecentoMedium;
-}
-@font-face{
-	src: url(fonts/novecentoLight.otf);
-	font-family: novecentoLight;
-}
 
 /*NAVBAR*/
 
-nav{box-shadow: 2px 2px 2px black}
+.nav-space{padding-top: 50px;}
+
+nav{/*box-shadow: 2px 2px 2px black*/}
 .navbar-brand{display: none;}
 .nav-style{
-	background-color: rgba(10,10,10,1);
+	background-color: rgba(10,10,10,0);
 	font-family: roboto;
 }
 .nav-item{
@@ -65,14 +51,22 @@ nav{box-shadow: 2px 2px 2px black}
 	text-align: center;
 	border-left: 1px solid rgba(255,255,255,0.3);
 	border-right: 1px solid rgba(255,255,255,0.3);
+	text-shadow: 1px 1px 1px black;
 }
-
+.dropdown-menu{
+	width: 16vw;
+	text-align: center;
+	background: rgba(10,10,10,0);
+}
+.dropdown-menu a{
+	color: white;
+}
 
 /*HEADER*/
 
 .mainHeader{
 	height: 110vh;
-	background: url(../img/backHeader.jpg);
+	/*background: url(../img/backHeader.jpg);*/
 	background-attachment: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;

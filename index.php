@@ -2,77 +2,60 @@
 <html class="no-js" lang="">
 
 <head>
+  <!-- META -->
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>House of Cut Men</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <!-- TITULO -->
+  <title>House of Cut Men</title>
+
+  <!-- Boilerplate -->
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
-  <link rel="stylesheet" href="https://i.icomoon.io/public/temp/df3d07685f/UntitledProject/style.css">
-  <!-- Place favicon.ico in the root directory -->
 
+  <!-- Icon -->
   <link rel="icon" href="img/icon.ico" type="image/x-icon"/>
   <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon"/>
 
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-  <!-- or -->
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <!-- Normalize.css -->
   <link rel="stylesheet" href="css/normalize.css">
+  <!-- Main.css -->
   <link rel="stylesheet" href="css/main.css">
+   <!-- Bootstrap --> 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <!-- Style.css -->
   <link rel="stylesheet" type="text/css" href="css/styleMain.css">
+
+  <!-- Background Change -->
+  <style type="text/css">
+<!--
+.changebg {
+  <?php $dayforbackground=date('N'); ?>
+  <?php if ($dayforbackground==1) { ?>background-image:url(img/backLunes.jpg);<?php } ?>
+  <?php if ($dayforbackground==2) { ?>background-image:url(img/backMartes.jpg);<?php } ?>
+  <?php if ($dayforbackground==3) { ?>background-image:url(img/backMiercoles.jpg);<?php } ?>
+  <?php if ($dayforbackground==4) { ?>background-image:url(img/backJueves.jpg);<?php } ?>
+  <?php if ($dayforbackground==5) { ?>background-image:url(img/backViernes.jpg);<?php } ?>
+  <?php if ($dayforbackground==6) { ?>background-image:url(img/backSabado.jpg);<?php } ?>
+  <?php if ($dayforbackground==7) { ?>background-image:url(img/backDomingo.jpg);<?php } ?>
+}
+-->
+</style>
+
 </head>
 
 <body data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-  <!--[if lte IE 9]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
 
   <!-- HTML Site -->
-  
+
 <!-- NAVBAR -->
-
-<nav class="navbar navbar-expand-md navbar-dark nav-style sticky-top">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto row">
-      <div class="col-md-1"></div>
-      <li class="nav-item col-md-2">
-        <a class="nav-link active" href="#nosotros">Nosotros</a>
-      </li>
-      <li class="nav-item col-md-2">
-        <a class="nav-link active" href="#horarios">Horarios</a>
-      </li>
-      <li class="nav-item col-md-2">
-        <a class="nav-link active" href="#precios">Precios</a>
-      </li>
-      <li class="nav-item col-md-2 dropdown">
-        <a id="navbarDropdown" class="nav-link active dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Sucursales</a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#boedo">Boedo</a>
-          <a class="dropdown-item" href="#vCrespo">Villa Crespo</a>
-        </div>
-      </li>
-      <li class="nav-item col-md-2">
-        <a class="nav-link active" href="#clubAmigos">Club de Amigos</a>
-      </li> 
-      <div class="col-md-1"></div>
-    </ul>
-  </div>
-</nav>
-
+<?php include("includes/navbar.php"); ?>
 
 <!-- HEADER -->
 
-<header class="mainHeader">
+<header class="mainHeader nav-space changebg"> 
   <div class="logoHeader" align="center">
   <div>
     <img src="img/logo.png" class="img-fluid">
@@ -102,6 +85,10 @@
   </div>
 </header>
 
+
+
+
+
  
 <div id="nosotros" class="separador2 container-fluid">
   <img src="img/tijera.png">
@@ -109,13 +96,13 @@
 
 
 <section class="row">
-  <article class="container col-md-2 titleNosotros">
+   <div class="container col-md-2"></div>
+  <article class="container col-md-1 titleNosotros">
     <h3>NOSOTROS</h3>
   </article>
   <article class="container col-md-4 pictureNosotros">
     <img src="img/nosotros.jpg" class="img-fluid">
   </article>
-  <div class="container col-md-1"></div>
   <article class="container col-md-3 textNosotros">
     <h4>Nuestros clientes nos eligen!</h4>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -135,8 +122,10 @@
 
 
 <section class="row">
-  <div class="container col-md-2 titleHorarios"><h3 id="horariosCopy">HORARIOS</h3></div>
-   <article class="container col-md-3 textHorarios">
+  <div class="container col-md-2 titleHorarios">
+    <h3 id="horariosCopy">HORARIOS</h3>
+  </div>
+  <article class="container col-md-3 textHorarios">
     <h4>Nuestros Horarios</h4>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -222,7 +211,7 @@
     </article>
 </section>
 
-<!--<div class="clubDeAmigosSec"><img src="img/clubAmigos.jpg"></div>-->
+
 
 
 <footer class="mainFooter row">
@@ -262,12 +251,36 @@
 
   <!-- Scripts -->
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <!-- Popper -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <!-- Bootstrap -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <!-- Modernizer & JS -->
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+
+
+  <!-- Plugins -->
+
+  <!-- SmoothScroll -->
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script> var scroll = new SmoothScroll('a[href*="#"]',{
+    header: '[data-scroll-header]'
+  });</script>
+
+  <!-- NavScroll -->
+  <script>
+     $(window).scroll(function () {
+      if ($(window).scrollTop() >= 50) {
+          $('.navbar').css('background','rgba(10,10,10,1)');
+      } else {
+        $('.navbar').css('background','transparent');
+        }
+    });
+  </script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
